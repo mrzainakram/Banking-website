@@ -6,6 +6,7 @@ import Register from './Register';
 import Withdraw from './Withdraw';
 import Deposit from './Deposit';
 import Transfer from './Transfer';
+import ResearchPapers from './ResearchPapers';
 
 
 function App() {
@@ -15,14 +16,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/research-papers-demo" element={<ResearchPapers />} />
         
           <Route path="/" element={<DashboardLayout />}>
             <Route path="/home" element={<HomePage />} />
             <Route path="/withdraw" element={<Withdraw />} />
             <Route path="/deposit" element={<Deposit />} />
             <Route path="/transfer" element={<Transfer />} />
-            
-    
+            <Route path="/research-papers" element={<ResearchPapers />} />
           </Route>
         </Routes>
       </BrowserRouter>
