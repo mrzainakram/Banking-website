@@ -1,6 +1,5 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaMoneyBillWave, FaCreditCard, FaExchangeAlt, FaFileInvoice, FaChartBar } from "react-icons/fa";
+import { FaMoneyBillWave, FaCreditCard, FaExchangeAlt, FaFileAlt } from "react-icons/fa";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -9,7 +8,7 @@ function HomePage() {
     <div className="bg-gradient-to-r from-purple-500 to-blue-500 min-h-screen p-6">
       <div className="bg-white rounded-lg shadow-md p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Perform Actions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <QuickActionCard
             title="Deposit"
             icon={<FaMoneyBillWave className="text-4xl text-purple-500" />}
@@ -25,8 +24,11 @@ function HomePage() {
             icon={<FaExchangeAlt className="text-4xl text-purple-500" />}
             onClick={() => navigate("/transfer")}
           />
-         
-         
+          <QuickActionCard
+            title="Research Papers"
+            icon={<FaFileAlt className="text-4xl text-purple-500" />}
+            onClick={() => navigate("/research-papers")}
+          />
         </div>
       </div>
     </div>

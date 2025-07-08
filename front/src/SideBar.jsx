@@ -1,5 +1,5 @@
 import { useNavigate, Link } from "react-router-dom";
-import { FaHome, FaDollarSign, FaArrowDown, FaArrowUp, FaExchangeAlt, FaEye, FaSignOutAlt } from "react-icons/fa";
+import { FaHome, FaArrowDown, FaArrowUp, FaExchangeAlt, FaEye, FaSignOutAlt, FaFileAlt } from "react-icons/fa";
 
 function Sidebar({ userData }) {
   const navigate = useNavigate();
@@ -41,6 +41,12 @@ function Sidebar({ userData }) {
           className="flex items-center px-6 py-3 hover:bg-purple-700 hover:text-white"
         >
           <FaExchangeAlt className="mr-2" /> Transfer
+        </Link>
+        <Link
+          to="/research-papers"
+          className="flex items-center px-6 py-3 hover:bg-purple-700 hover:text-white"
+        >
+          <FaFileAlt className="mr-2" /> Research Papers
         </Link>
         <Link
           to="/checkbalance"
